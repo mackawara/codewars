@@ -10,5 +10,7 @@ Input: 123456789 Output: 987654321 */
 function descendingOrder(n){
   // convert to string then array then use array methods to sort
 return  parseInt(n.toString().split("").sort().reverse().toString().replace(/,/g, ""))
+  
+  // possble improvement noted from oher solutions use join() to convert array to string
 
 }
