@@ -17,3 +17,6 @@ function bmi(weight, height) {
   else if (bmi>30)return "Obese"
   else  return "Overweight";
 }
+
+/* lessons
+How to use ** operator and the Math.pow(firstNUmber, powerOperator) */
