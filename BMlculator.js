@@ -19,4 +19,6 @@ function bmi(weight, height) {
 }
 
 /* lessons
-How to use ** operator and the Math.pow(firstNUmber, powerOperator) */
+How to use ** operator and the Math.pow(firstNUmber, powerOperator)
+Ternary operator can be stringed togethe
+*/
