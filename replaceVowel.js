@@ -10,8 +10,12 @@ Note: for this kata y isn't considered a vowel. */
 
 
 function disemvowel(str) {
-  const vowels=["a","e","i","o","u"]
-  const newStr=vowels.filter((vowel)=>{ return str.replace(vowel,"")})
+ 
+  //convert to array by split then check each list item by using regex 
   
-  return newStr
+  const strArr=str.split("").map((letter)=>letter.match(/a|e|i|o|u/gi)?"":letter).join("")
+  
+return strArr
 }
+
+// lessons gi in regex means ignore case
