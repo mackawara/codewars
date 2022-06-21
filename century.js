@@ -9,3 +9,8 @@ Examples
 1900 --> 19
 1601 --> 17
 2000 --> 20 */
+function century(year) {
+  // Finish this :)
+  const century=year/100 
+  return Number.isInteger(century)?parseInt(year/100):parseInt(century+1)
+}
