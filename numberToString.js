@@ -9,3 +9,8 @@ function numberToString(num) {
   return `${num}`
   // Return a string of the number here!
 }
+
+// laternative solution
+function numberToString(num) {
+  return ''+num;
+}
