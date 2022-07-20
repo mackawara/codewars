@@ -28,26 +28,24 @@ Examples:
 function bouncingBall(h, bounce, window) {
   // your code here
 
-  let views=0; // number of timeS Mom sees th ball
+  let views = 0; // number of timeS Mom sees th ball
 
   let reboundHeight = h * bounce;
-  
 
-  if (h > 0 && h > window && bounce > 0 && bounce < 1) {// check if all minimu conditions have been met and run
-        while(reboundHeight > window) {
-        console.log(reboundHeight)
-      views += 2;// for each true condition mum see the ball twice once on the way down and once on the way up(rebound)
-       reboundHeight = reboundHeight * bounce; // recalculate the rebound height at each bounce
+  if (h > 0 && h > window && bounce > 0 && bounce < 1) {
+    // check if all minimu conditions have been met and run
+    while (reboundHeight > window) {
+      console.log(reboundHeight);
+      views += 2; // for each true condition mum see the ball twice once on the way down and once on the way up(rebound)
+      reboundHeight = reboundHeight * bounce; // recalculate the rebound height at each bounce
     }
-    views+=1
-    console.log(views)
-  return views
- }
-    else {
-        console.log(-1)
-return -1
-    }
+    views += 1;
+    console.log(views);
+    return views;
+  } else {
+    console.log(-1);
+    return -1;
   }
-  
+}
 
-bouncingBall(3, 1, 1.5);
+bouncingBall(3, 0.1, 1.5);
