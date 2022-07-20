@@ -34,11 +34,7 @@ function bouncingBall(h, bounce, window) {
   
 
   if (h > 0 && h > window && bounce > 0 && bounce < 1) {// check if all minimu conditions have been met and run
-    console.log("while loop running");
-    // reboundHeight=iterator
-    //console.log(reboundHeight)
-
-    while(reboundHeight > window) {
+        while(reboundHeight > window) {
         console.log(reboundHeight)
       views += 2;// for each true condition mum see the ball twice once on the way down and once on the way up(rebound)
        reboundHeight = reboundHeight * bounce; // recalculate the rebound height at each bounce
