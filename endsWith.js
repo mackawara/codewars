@@ -8,10 +8,8 @@ solution('abc', 'd') // returns false */
 /* SOlution */
 function solution(str, ending){
     // TODO: complete
-    const len=ending.split("").length
-    const spliced=str.split("").splice(-len,len).join("")
-    console.log(spliced)
-    const endinArr=ending.split("")
-    return ending==spliced
+    const len=ending.split("").length 
+    return ending==str.split("").splice(-len,len).join("") // use splice to extract the last nth characters depnding on lenght of string to be matched
+     // compare returned string with ending
   }
   console.log(solution("johns","ohns"))
