@@ -10,3 +10,11 @@ const endsWith = (str, ending) =>
   ending == str.split("").splice(-ending.length, ending.length).join(""); // use splice to extract the last nth characters depnding on lenght of string to be matched
 
 console.log(endsWith("johnds", "ohns"));
+
+/* BEtter Solution
+uses the string method endsWith
+
+const endsWith=(str,ending)=>
+str.endsWith(ending)
+
+*/
