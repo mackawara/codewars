@@ -6,10 +6,10 @@ solution('abc', 'bc') // returns true
 solution('abc', 'd') // returns false */
 
 /* SOlution */
-function solution(str, ending){
+const endsWith=(str, ending)=>{
     // TODO: complete
     const len=ending.split("").length 
     return ending==str.split("").splice(-len,len).join("") // use splice to extract the last nth characters depnding on lenght of string to be matched
      // compare returned string with ending
   }
-  console.log(solution("johns","ohns"))
+  console.log(endsWith("johns","ohns"))
