@@ -27,12 +27,14 @@ Steps
 function printerError(s) {
  const denominator=s.length
  const aMC=["a","b","c","d","e","f","g","h","i","j","k","l","m"]
- let numerator=0
- s.split("").forEach(element => {
-    aMC.includes(element)?console.log("genuine"):numerator++
+ let numerator=0 // initialise a counter for errors 
+ s.split("").filter(element => {
+    aMC.includes(element)?console.log("genuine"):numerator++ // check if each letter is anong the expected letter
     
- });
+ }).length
  console.log(`${numerator}/${denominator}`)
 }
 printerError("aaabbbbhaijjjm")
 printerError("aaaxbbbbyyhwawiwjjjwwm")
+
+//Lessons : strings are iterable. You dont always have to convert to array
