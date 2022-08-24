@@ -14,16 +14,23 @@ arrayDiff([1,2,2,2,3],[2]) == [1,3] */
 //4. remove the elements from the first array and retrun the resuls
 
 /* Solution */
-const array1 = [1, 2, 2, 3,7,3,3,3,3];
-const array2 = [1, 1, 0, 4, 4,7,3];
+const array1 = [4,5,6,7,3,3,3];
+const array2 = [1,2,3,4]; /// expected answer [5,6,7]
 function arrayDiff(a, b) {
-
+    let answer=[]
   b.forEach((number) => {
-    a.splice(number,1)
-    });
-    /*   const indexx=a.indexOf(number)
-  console.log(indexx) */
-  
-  return a;
+    console.log(number)
+   answer= a.filter((item) => {
+      item==number}
+       // a.splice(item,1)
+       // console.log("number "+number+ "item"+ item)
+        //answer.push(item)
+  )})
+ 
+  return answer;
 }
+  /*   const indexx=a.indexOf(number)
+  console.log(indexx) */
+
+
 console.log(arrayDiff(array1, array2));
