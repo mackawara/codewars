@@ -10,16 +10,20 @@ arrayDiff([1,2,2,2,3],[2]) == [1,3] */
 //possible solution
 //1 . search for the elements of the first array in the second array
 //2. look for every instant of the element in the second
-//3. loop through the 1st array and check for the element? 
+//3. loop through the 1st array and check for the element?
 //4. remove the elements from the first array and retrun the resuls
 
 /* Solution */
-const array1= [2,3,4,2,3,2,3]
-const array2=[1,1,3,4,4,3,4]
+const array1 = [1, 2, 2, 3,7,3,3,3,3];
+const array2 = [1, 1, 0, 4, 4,7,3];
 function arrayDiff(a, b) {
-  array1.forEach(number=>{
-    array2.slice(number)
-  })
-  return array2
+
+  b.forEach((number) => {
+    a.splice(number,1)
+    });
+    /*   const indexx=a.indexOf(number)
+  console.log(indexx) */
+  
+  return a;
 }
-arrayDiff(array1,array2)
+console.log(arrayDiff(array1, array2));
