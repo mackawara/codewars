@@ -14,14 +14,7 @@ arrayDiff([1,2,2,2,3],[2]) == [1,3] */
 //4. remove the elements from the first array and retrun the resuls
 
 /* Solution */
-const array1 = [1,2,]
-const array2 = [1]; /// expected answer [1,3]
+// 1 liner refactoring
+const arrayDiff=(a, b) => a.filter(item=>!b.includes(item)) // check if element is to be found in second array
 
-function arrayDiff(a, b) {
-  return a.filter((item)=>{ //create a new array with only those items that are not present in array b 
-    return !b.includes(item) // check if element is to be found in second array
-  })
- r
-}
 
-console.log(arrayDiff(array1, array2));
