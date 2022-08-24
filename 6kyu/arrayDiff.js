@@ -14,6 +14,12 @@ arrayDiff([1,2,2,2,3],[2]) == [1,3] */
 //4. remove the elements from the first array and retrun the resuls
 
 /* Solution */
+const array1= [2,3,4,2,3,2,3]
+const array2=[1,1,3,4,4,3,4]
 function arrayDiff(a, b) {
-  
+  array1.forEach(number=>{
+    array2.slice(number)
+  })
+  return array2
 }
+arrayDiff(array1,array2)
