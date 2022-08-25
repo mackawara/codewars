@@ -12,9 +12,12 @@ summation(8) -> 36
 
 var summation = function (num) {
     // Code here
-    let sum
-    for (let index = 0; index < num; index++) {
+    let sum=0
+    for (let index = 0; index <= num; index++) {
         sum=sum+index
+        console.log(index)
         
     }
+    return sum
   }
+  console.log(summation(8))
