@@ -35,17 +35,24 @@ The two arrays have the same size (> 0) given as parameter in function comp.
 // 2 MUST RETUN TRUE FOR ALL THE NUMBERS
 // 3 USES SOME
 
-const a = [121, 144, 19, 161, 19, 144, 19, 11]  ,
-b = [121, 14641, 20736, 36100, 25921, 361, 20736, 361]
+const a = [121, 144, 19, 161, 19, 144, 19, 11],
+  b = [121, 14641, 20736, 361, 25921, 361, 20736, 361];
 
-function comp(a1,b1){
-    //your code here
-    
-   /*  return a1.some((item)=>b1.forEach(number=>{
+function comp(a, b) {
+  truthyarray = [];
+  b.forEach((item) => {
+    if (a.includes(Math.sqrt(item))) {
+      truthyarray.push(item);
+    }
+  });
+  
+
+  return truthyarray.length == b.length;
+}
+/*  return a1.some((item)=>b1.forEach(number=>{
         console.log(`number = ${number} and item =${item}`)
         number==item*item
     }))
      */
 
-  }
-  console.log(comp(a,b))
+console.log(comp(a, b));
