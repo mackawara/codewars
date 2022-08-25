@@ -35,19 +35,26 @@ The two arrays have the same size (> 0) given as parameter in function comp.
 // 2 MUST RETUN TRUE FOR ALL THE NUMBERS
 // 3 USES SOME
 
-const a = [121, 144, 19, 161, 19, 144, 19, 11],
-  b = [121, 14641, 20736, 361, 25921, 361, 20736, 361];
-
-function comp(a, b) {
-  truthyarray = [];
-  b.forEach((item) => {
-    if (a.includes(Math.sqrt(item))) {
-      truthyarray.push(item);
-    }
-  });
+const a = [121, 144, 19, 161, 19, 144, 19, 11],  
+b = [121, 14641, 20736, 361, 25921, 361, 20736, 361],
+  c = [121, 144, 19, 161, 19, 144, 19, 11,23],  
+d = [121, 14641, 20736, 361, 25921, 361, 20736, 361]
   
-
-  return truthyarray.length == b.length;
+function comp(a, b) {
+    if (a==null||b==null){// chec if anny of the parsed values are null
+        return false
+    }
+    else{
+        const sortArray=(arr)=>{//sort the array element in ascending order and then converts to string
+            return arr.sort((a,z)=>a-z).join(",")
+    }
+ const truthyarray = sortArray(a.map(item=>item**2))//multiplies each element of the first array " squares each"
+ const testArr=sortArray(b)
+  
+ 
+  return truthyarray==testArr 
+    }
+   // compare the 2 to see if they are the same i.e  arrays can noot be compared
 }
 /*  return a1.some((item)=>b1.forEach(number=>{
         console.log(`number = ${number} and item =${item}`)
@@ -55,4 +62,4 @@ function comp(a, b) {
     }))
      */
 
-console.log(comp(a, b));
+console.log(comp(c, d));
