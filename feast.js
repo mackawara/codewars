@@ -16,8 +16,11 @@ b="grape"
 function feast(beast, dish) {
    
     //using indices
-    const lastind=string=>string.length-1
+    /* const lastind=string=>string.length-1
     console.log(beast[0],beast[lastind(beast)])
-  return  beast[0]==dish[0]&&beast[lastind(beast)]==dish[lastind(dish)]?true:false
+  return  beast[0]==dish[0]&&beast[lastind(beast)]==dish[lastind(dish)]?true:false */
+  //using charAt
+  const lastind=string=>string.length-1
+     return  beast.charAt(0)==dish.charAt(0)&&beast.charAt(lastind(beast))==dish.charAt(lastind(dish))?true:false
     }
     console.log(feast(a,b))
