@@ -15,22 +15,21 @@ Assertion messages may be unclear about what they display in some languages. If 
 //3. convert if length >1
 //4. return string
 
-function duplicateEncode(word){
-    const array1=word.toLowerCase().split("")
-    function getCount(letter,array){
-        let count=0
-        array.forEach(item=>{
-            if (letter==item)count++
-           // console.log(count)
-        
-        })
-        console.log(count)
-       return count
-       }
- return array1.map(letter=>{
-     if (getCount(letter,array1)>1)return ")"
-     else return "("   
-    }).join("")
-    
+function duplicateEncode(word) {
+  const array1 = word.toLowerCase().split("");
+  // this function take an array and letter and checks the number of occurence and returns the amount oftimes the letter occurs in the aarray. Uses the count to convert to the desired
+  function getCountConvert(letter, array) {
+    let count = 0;
+    array.forEach((item) => {
+      if (letter == item) count++;
+    });
+
+    return count > 1 ? ")" : "(";
+  }
+  //uses the converter to return the converted string
+  return array1.map((letter) => getCountConvert(letter, array1)).join("");
 }
-console.log(duplicateEncode("success"))
+console.log(duplicateEncode("success"));
+
+//lessos from other use lastIndexOf and index of which would be checking if the first occurence is the last
+
