@@ -13,7 +13,7 @@ const e = require("express");
 //.2 identify the vowels using regex
 //3. array.map to recreate the string without the vowels
 
-function shortcut(string) {
+/* function shortcut(string) {
   return string
     .split("") 
     .map((letter) => {
@@ -21,6 +21,6 @@ function shortcut(string) {
     })
     .join("");
 }
-console.log(shortcut("hello"));
+console.log(shortcut("hello")); */
 
 //piece of cake
