@@ -30,22 +30,28 @@ SIMILAR KATA: */
 //1.split the text to individual
 //2. identify the vowels using regex
 //3. use map to rreplace vowel with the next one
+//put code to move the ;etter to t he next
 
 function vowelShift(text, n) {
-
- const vowelArr=  text.split("").filter(letter=>{
-       return /a|e|i|o|u/.test(letter)
-    })
-const  test=    vowelArr.forEach((vowel,index,array) => {
-        const nextV=array[index+n]
-        console.log(nextV)
-      return  text.split("").map((letter,index1, array1)=>{
-        if (!typeof(nextV)==undefined&&letter==vowel){
+  const vowelArr = text.split("").filer((letter) => {
+    return /a|e|i|o|u/.test(letter);
+  });
+  console.log(vowelArr);
+  /*  const test = vowelArr.forEach((vowel, index, array) => {
+    const nextV = array[index + n];
+    // console.log(vowel,nextV)
+    return text.split("").map((letter, index1, array1) => {
+        // console.log(letter);
+        if (typeof nextV && letter == vowel) {
+            return nextV;
+        } else {
+            return letter;
+        }
+    }); */
+  /*  if (!typeof(nextV)==undefined&&letter==vowel){
             console.log(letter)}
-     q   })
-        
-    });
-    console.log(test)
-    
-  }
-  console.log(vowelShift("wangudavuda",1))
+       }) */
+}
+//console.log(test);
+
+console.log(vowelShift("wangudavuda", 1));
