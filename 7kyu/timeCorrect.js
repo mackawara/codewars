@@ -18,9 +18,8 @@ I have created other katas. Have a look if you like coding and challenges.
 
 function timeCorrect(timestring) {
   const formatReg = /[0-9][0-9]:[0-9][0-9]:[0-9][0-9]/;
-  console.log(timestring);
+
   function prefix(parts) {
-    console.log(parts);
     const part = parts.toString();
     if (part.length < 2) {
       return "0" + part;
@@ -28,7 +27,7 @@ function timeCorrect(timestring) {
       return part;
     }
   }
-
+// test if given string conforms
   if (timestring == null || timestring == "") {
     return timestring;
   } else if (!formatReg.test(timestring)) {
@@ -41,7 +40,6 @@ function timeCorrect(timestring) {
     let hours = arr[0],
       minutes = arr[1],
       seconds = arr[2];
-    console.log(seconds);
 
     // set constraints and fix each part of the time string
 
@@ -57,9 +55,13 @@ function timeCorrect(timestring) {
       hours -= 24;
     }
     {
-       // while (/[0|1\d]|2[]0-4]/.test(hours))
+       // while (/[0|1\d]|2[]0-4]/.test(hours)){
+           //e hour-=24
+        
       return prefix(hours) + ":" + minutes + ":" + seconds;
     }
   }
 }
-console.log(timeCorrect("52:01:00"));
+console.log(timeCorrect("28:01:01"))
+//possible improvements
+/* remove if stateements or aat les simlifiy them or put them in function */
