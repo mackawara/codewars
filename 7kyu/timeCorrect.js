@@ -27,7 +27,7 @@ function timeCorrect(timestring) {
       return part;
     }
   }
-// test if given string conforms
+  // test if given string conforms
   if (timestring == null || timestring == "") {
     return timestring;
   } else if (!formatReg.test(timestring)) {
@@ -42,8 +42,18 @@ function timeCorrect(timestring) {
       seconds = arr[2];
 
     // set constraints and fix each part of the time string
-
-    if (seconds >= 60) {
+    function regularise(part, maximum, nextPart) {
+      while (part >= maximum) {
+          if (nextPart) {
+              nextPart = parseInt(nextPart) + 1;
+            }
+            return   part -= maximum;
+      }
+    }
+    seconds=regularise(seconds, 60, minutes);
+    minutes=regularise(minutes, 60, hours);
+    hours=regularise(hours, 24);
+  /*   if (seconds >= 60) {
       seconds -= 60;
       minutes = parseInt(minutes) + 1;
     }
@@ -53,15 +63,15 @@ function timeCorrect(timestring) {
     }
     while (hours >= 24) {
       hours -= 24;
-    }
-    {
-       // while (/[0|1\d]|2[]0-4]/.test(hours)){
-           //e hour-=24
-        
+    } */
+    
+      // while (/[0|1\d]|2[]0-4]/.test(hours)){
+      //e hour-=24
+
       return prefix(hours) + ":" + minutes + ":" + seconds;
-    }
+    
   }
 }
-console.log(timeCorrect("28:01:01"))
+console.log(timeCorrect("28:91:91"));
 //possible improvements
 /* remove if stateements or aat les simlifiy them or put them in function */
